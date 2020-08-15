@@ -11,6 +11,8 @@ routes.post('/users', usersController.create)
 
 routes.put('/users', usersController.update_location)
 
+routes.put('/users/flag', usersController.flag)
+
 
     
 export default routes;
