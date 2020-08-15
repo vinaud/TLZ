@@ -9,6 +9,37 @@ export default class UsersController{
         return response.json({message: "hello world"});
     };
 
+    async update_location(request: Request, response: Response) {
+        
+        const {
+            user_id, 
+            new_latitude,
+            new_longitude,
+           
+        } = request.body;
+
+        const transaction = await db.transaction();
+
+        try {
+            const updatedUsersIds = await transaction('users')
+            .where({ id: user_id })
+            .update({ latitude: new_latitude, longitude: new_longitude })
+    
+            await transaction.commit();
+        
+            return response.status(201).json({
+               message: 'Location updated',
+                
+            })
+        } catch (err) {
+            await transaction.rollback();
+            return response.status(400).json({
+                error: 'Error at updating user location'
+            })
+        }
+
+    };
+
     async create(request: Request, response: Response) {
         
         const {
@@ -52,11 +83,14 @@ export default class UsersController{
 
             await transaction.commit();
         
-            return response.status(201).send();
+            return response.status(201).json({
+                user: name,
+                id: user_id
+            })
         } catch (err) {
             await transaction.rollback();
             return response.status(400).json({
-                error: 'Erro ao cadastrar o usuário no sistema'
+                error: 'Error at creating new user'
             })
         }
     

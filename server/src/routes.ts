@@ -9,5 +9,8 @@ routes.get('/users', usersController.index);
 
 routes.post('/users', usersController.create)
 
+routes.put('/users', usersController.update_location)
+
+
     
 export default routes;
