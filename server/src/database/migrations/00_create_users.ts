@@ -9,7 +9,6 @@ export async function up(knex: Knex){
         table.float('latitude').notNullable;
         table.float('longitude').notNullable;
         table.boolean('infected').notNullable;
-        table.integer('points').notNullable;
         table.integer('reports').notNullable; //amount of infected repors for the user
     })
 }
