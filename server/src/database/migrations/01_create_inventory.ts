@@ -7,6 +7,7 @@ export async function up(knex: Knex){
         table.integer('weapon').notNullable;
         table.integer('medicine').notNullable;
         table.integer('food').notNullable;
+        table.boolean('accessible').notNullable;
         table.integer('user_id')
             .notNullable()
             .references('id')

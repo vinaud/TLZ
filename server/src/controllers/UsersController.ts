@@ -72,12 +72,15 @@ export default class UsersController{
             });
         
             const user_id = insertedUsersIds[0];
+            const accessible = true;
+            
             
             const insertedInventoryIds = await transaction('inventory').insert({
                 water,
                 weapon,
                 medicine,
                 food,
+                accessible,
                 user_id
             });
 
