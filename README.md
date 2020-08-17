@@ -124,7 +124,7 @@ If both users items point for trade don't match, the trade won't happen and a 40
 
 ### Infected Report 
 
-GET http://localhost:3333/repots/infected
+GET http://localhost:3333/reports/infected
 
 Response:
 {
@@ -135,7 +135,7 @@ Response:
 
 ### Non-infected Report
 
-GET http://localhost:3333/repots/not-infected
+GET http://localhost:3333/reports/not-infected
 
 Response: 
 {
@@ -146,7 +146,7 @@ Response:
 
 ### Average Items per Survivor
 
-GET http://localhost:3333/repots/avg-items
+GET http://localhost:3333/reports/avg-items
 
 Response:
 {

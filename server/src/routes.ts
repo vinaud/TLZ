@@ -17,12 +17,12 @@ routes.put('/users/flag', usersController.flag);
 
 routes.put('/users/trade', usersController.trade);
 
-routes.get('/repots/infected', reportsController.get_infected);
+routes.get('/reports/infected', reportsController.get_infected);
 
-routes.get('/repots/not-infected', reportsController.get_not_infected);
+routes.get('/reports/not-infected', reportsController.get_not_infected);
 
-routes.get('/repots/avg-items', reportsController.avgItems);
-
+routes.get('/reports/avg-items', reportsController.avgItems);
+ 
 routes.get('/reports/lost-points', reportsController.lostItems);
 
 
