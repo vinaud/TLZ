@@ -9,15 +9,21 @@ const reportsController = new ReportsController();
 
 routes.get('/users', usersController.index);
 
-routes.post('/users', usersController.create)
+routes.post('/users', usersController.create);
 
-routes.put('/users', usersController.update_location)
+routes.put('/users', usersController.update_location);
 
-routes.put('/users/flag', usersController.flag)
+routes.put('/users/flag', usersController.flag);
 
-routes.put('/users/trade', usersController.trade)
+routes.put('/users/trade', usersController.trade);
 
-routes.get('/repots/infected', reportsController.get_infected)
+routes.get('/repots/infected', reportsController.get_infected);
+
+routes.get('/repots/not-infected', reportsController.get_not_infected);
+
+routes.get('/repots/avg-items', reportsController.avgItems);
+
+routes.get('/reports/lost-points', reportsController.lostItems);
 
 
     
