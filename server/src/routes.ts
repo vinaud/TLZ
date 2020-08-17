@@ -13,6 +13,8 @@ routes.put('/users', usersController.update_location)
 
 routes.put('/users/flag', usersController.flag)
 
+routes.put('/users/trade', usersController.trade)
+
 
     
 export default routes;
