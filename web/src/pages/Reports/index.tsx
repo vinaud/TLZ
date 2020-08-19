@@ -51,21 +51,84 @@ function Landing() {
 return(
     <div>
       <Header/>
-        <div >
-            <h1>Recent Reports</h1>
-            <h2>Infected Survival Percentage:{infected} %</h2>
-            <h2>Non-Infected Survival Percentage: {nonInfected} %</h2>
-            <h2>Total Lost points by infected survivals: { points } points</h2>
-            <h1>Inventory Reports</h1>
-            <h3>Average items quantity per person: {Math.round(avgItems)} items</h3>
-            <h3>Average items quantity per healthy person: {Math.round(avgItemsHealthy)} items</h3>
-            <h2>Average quantity by item:</h2>
-            <h3>Fiji Water: { Math.round(water) }</h3>
-            <h3>Campbell Soup: { Math.round(soup) }</h3>
-            <h3>First Aid Pouch: { Math.round(medicine) }</h3>
-            <h3>AK-47: {Math.round(gun)}</h3>
+        
+
+        <div className='p-8 flex flex-col items-center  sm: bg-cover bg-center  text-center justify-between bg-fixed '   >
+          <div className='  rounded-lg p-8 bg-gray-200 bg-opacity-50'>
+          <h1 className = 'text-4xl text-center m-8'>Recent Reports</h1>
+           
+            <table className="table-auto">
+              <tbody>
+                <tr className="bg-gray-500">
+                  <td className="border px-4 py-2">Infected Survival Percentage</td>
+                  <td className="border px-4 py-2">{Math.round(infected)}%</td>
+     
+                </tr>
+                <tr className="bg-gray-300">
+                  <td className="border px-4 py-2">Non-Infected Survival Percentage</td>
+                  <td className="border px-4 py-2">{Math.round(nonInfected)}%</td>
+      
+                </tr>
+                <tr className="bg-gray-500" >
+                  <td className="border px-4 py-2">Total Lost points by infected survivals</td>
+                  <td className="border px-4 py-2">{ points } points</td>
+     
+                </tr>
+             </tbody>
+           </table>
+
+            <h1 className = 'text-4xl text-center m-8'>Inventory Reports</h1>
+            
+            <table className="table-fixed">
+              <tbody>
+                <tr className="bg-gray-500">
+                  <td className="border px-4 py-2">Average items quantity per person</td>
+                  <td className="border px-4 py-2">{Math.round(avgItems)} items</td>
+     
+                </tr>
+                <tr className="bg-gray-300">
+                  <td className="border px-4 py-2">Average items quantity per healthy person</td>
+                  <td className="border px-4 py-2">{Math.round(avgItemsHealthy)} items</td>
+      
+                </tr>
+
+                <tr className="bg-gray-500 text-xl text-center " >
+                  <td className="border px-4 py-2">Average quantity by item:</td>
+                </tr>
+
+                
+                <tr className="bg-gray-300">
+                  <td className="border px-4 py-2">Fiji Water</td>
+                  <td className="border px-4 py-2">{ Math.round(water) } </td>
+      
+                </tr>
+
+                <tr className="bg-gray-500">
+                  <td className="border px-4 py-2">Campbell Soup</td>
+                  <td className="border px-4 py-2">{ Math.round(soup) } </td>
+      
+                </tr>
+
+                <tr className="bg-gray-300">
+                  <td className="border px-4 py-2">First-Aid Pouch</td>
+                  <td className="border px-4 py-2">{ Math.round(medicine) } </td>
+      
+                </tr>
+
+                <tr className="bg-gray-500">
+                  <td className="border px-4 py-2">AK-47</td>
+                  <td className="border px-4 py-2">{Math.round(gun)}</td>
+      
+                </tr>
+                
+             </tbody>
+           </table>
+          </div>
+              
         </div>
+    
     </div>
+    
 )
 }
 
