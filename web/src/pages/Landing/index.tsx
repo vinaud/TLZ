@@ -8,16 +8,13 @@ function Landing() {
 return(
     <div>
       <Header/>
-      <h1>Hello Survivor !</h1>
-    <div className="buttons-container">
-          <Link to="/reports" className="reports">
-            Reports
-          </Link>
-
-          <Link to="/register" className="register">
-           Register
-          </Link>
+      <div>
+            <h1 className = 'text-4xl text-center m-8'>Welcome Survivor!</h1>
+            <h1 className = 'text-3xl text-center m-8'>Register yourself NOW!!</h1>
+            <h1 className = 'text-3xl text-center m-8'>See our live reports about infected people and
+             resources inventory.</h1>
         </div>
+    
     </div>
 )
 }

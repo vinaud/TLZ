@@ -1,5 +1,6 @@
 import React,  { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Header  from '../../components/Header';
 
 function Landing() {
 
@@ -49,6 +50,7 @@ function Landing() {
 
 return(
     <div>
+      <Header/>
         <div >
             <h1>Recent Reports</h1>
             <h2>Infected Survival Percentage:{infected} %</h2>

@@ -1,10 +1,11 @@
 import React from 'react';
 import Logo from '../Logo';
+import MenuBar from '../MenuBar'
 
 const Header = () => {
     return(
         <div>
-            <header className = 'p-4 bg-indigo-800 sm:flex justify-between items-center'>
+            <header className = 'p-4 bg-gray-600 sm:flex justify-between items-center'>
 
             <Logo />
 
@@ -12,6 +13,7 @@ const Header = () => {
             
 
             </header>
+            <MenuBar/>
         </div>
     )
 }
