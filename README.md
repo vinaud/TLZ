@@ -1,8 +1,29 @@
 # TLZ
 
+# Web
+
+## Instructions
+select folder 'web'
+
+### Instalation
+
+- Install dependencies:
+```bash
+
+$ yarn install
+```
+
+### Execution
+
+```bash
+
+$ yarn start
+```
 # Server
 
 ## Instructions
+select folder 'server'
+
 ### Instalation
 
 - Install dependencies:
